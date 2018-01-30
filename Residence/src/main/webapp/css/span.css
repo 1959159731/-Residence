@@ -1,0 +1,41 @@
+span.title{
+	display: block;
+	width: 100px;
+	height: 28px;
+	position: relative;
+	top: -15px;
+	text-align: center;
+	background: #F5F5F5;
+	border-color: #8E8E8E;
+	border: #8E8E8E;
+}
+.span-div{
+	width: 85%;
+	height:66% ;
+	padding: 4px 25px;
+	margin:15px;
+	border: 1px solid;
+}
+z{
+	font-family: "微软雅黑";
+	font-size: 15px;
+	color: #A9A9A9;
+}
+.div-top{
+	width: 900px;
+	height: 500px;
+	margin-top:100px;
+	margin-left:350px;
+	border:solid 1px;
+	border-color: #8E8E8E;
+	background:#F5F5F5;
+	border-top-width: medium;
+	border-bottom-width: medium;
+}
+
+
+
+
+
+
+
