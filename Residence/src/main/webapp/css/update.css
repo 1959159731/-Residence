@@ -1,0 +1,42 @@
+span.title{
+    display:block;
+    width:100px;
+    height:30px;
+    position:relative;
+    top:-15px;
+    text-align: center;
+    background: white;
+}
+.div1{
+	border: solid 1px;
+	width: 97%;
+	color:#8E8E8E;
+	margin-left: 10px;
+	margin-top: 19px;
+}
+.center{
+		border:solid 1px;
+		width:800px;
+		height:30%;
+		margin:0 auto;
+}
+table{
+	   margin:0 auto;
+	   line-height:3;
+}
+textarea{
+	width:658px;
+}
+
+select{
+	width: 130px;
+    height: 24px;
+    font-size: 13px;
+    color:#555555;
+}
+z{
+	
+	font-family: "Î¢ÈíÑÅºÚ";
+	font-size: 15px;
+	color: #555555;
+}
