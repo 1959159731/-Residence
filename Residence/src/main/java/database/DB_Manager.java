@@ -20,7 +20,7 @@ public abstract class DB_Manager {
 	
 	//创建连接
 	public Connection openConnection() throws SQLException {
-		String url="jdbc:mysql://localhost:3306/work";
+		String url="jdbc:mysql://localhost:3306/work?useSSL=true";
 		return DriverManager.getConnection(url,"root","1234");		
 	}
 	
