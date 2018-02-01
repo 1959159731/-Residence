@@ -1,23 +1,22 @@
 span.title{
-	display: block;
-	width: 100px;
-	height: 28px;
-	position: relative;
-	top: -15px;
-	text-align: center;
-	background: #F5F5F5;
-	border-color: #8E8E8E;
-	border: #8E8E8E;
+    display:block;
+    width:100px;
+    height:30px;
+    position:relative;
+    top:-15px;
+    text-align: center;
+    background: #F5F5F5;
 }
 .span-div{
 	width: 85%;
-	height:66% ;
-	padding: 4px 25px;
+	height:340px;
+	padding: 1px 25px;
 	margin:15px;
 	border: 1px solid;
+ 	color: #808080;		
 }
 z{
-	font-family: "å¾®è½¯é›…é»‘";
+	font-family: "Î¢ÈíÑÅºÚ";
 	font-size: 15px;
 	color: #A9A9A9;
 }
