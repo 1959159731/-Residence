@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import com.residence.entity.User;
 
 public class UserDao extends DBManger{
+	
 	public User loadUser(User user) throws SQLException{
 		User u=null;
 		String sql="select * from users where userName=? and userPwd=?";
@@ -23,5 +24,6 @@ public class UserDao extends DBManger{
 		this.closeConnection(conn);
 		return u;
 	}
+	
 }
 

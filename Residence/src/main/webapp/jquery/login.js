@@ -46,8 +46,8 @@ function submitForm(){
          document.getElementById('indentify').reflush();
          createCode();    
      }else{
-    	 //输入成功  
-    	 $('#ff').form('submit',{url:"loginServlet?code",success:function(data){
+    	 //输入正确  
+    	 $('#ff').form('submit',{url:"loginServlet",success:function(data){
     			if(parseInt(data)==1){
     				location.href="index.html";
     			}else{
@@ -55,10 +55,9 @@ function submitForm(){
     			}
     		}});
      }
-     
-	
-	
+    
 }
+
 function clearForm(){
 	$('#ff').form('clear');
 	createCode();

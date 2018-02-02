@@ -8,8 +8,27 @@
   	<servlet-name>loginServlet</servlet-name>
   	<servlet-class>com.residence.servlet.LoginServlet</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>resSelectServlet</servlet-name>
+  	<servlet-class>com.residence.servlet.ResSelectServlet</servlet-class>
+  </servlet>
+   <servlet>
+  	<servlet-name>populationSelectServlet</servlet-name>
+  	<servlet-class>com.residence.servlet.PopulationSelectServlet</servlet-class>
+  </servlet>
+
+  
   <servlet-mapping>
   	<servlet-name>loginServlet</servlet-name>
   	<url-pattern>/loginServlet</url-pattern>
   </servlet-mapping>
+   <servlet-mapping>
+  	<servlet-name>resSelectServlet</servlet-name>
+  	<url-pattern>/resSelectServlet</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+  	<servlet-name>populationSelectServlet</servlet-name>
+  	<url-pattern>/populationSelectServlet</url-pattern>
+  </servlet-mapping>
+
 </web-app>

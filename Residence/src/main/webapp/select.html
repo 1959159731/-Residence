@@ -6,42 +6,71 @@
 	<link rel="stylesheet" type="text/css" href="css/easyui.css">
 	<link rel="stylesheet" type="text/css" href="css/icon.css">
 	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
-	<script>
-		function doSearch(value){
-			alert('You input: ' + value);
-		}
-	</script>
+	<script type="text/javascript" src="jquery/select.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/select.css">
 </head>
 <body>
+
 	<div class="easyui-tabs" style="width:100%;height:450px;margin-top: 20px;">
+	<form id="select" method="post">
 		<div title="按户号查询" style="padding:10px">
-			<div class="easyui-panel" style="width:100%;height: 15%;padding:15px;border: none;">
-				请输入户号：<input class="easyui-searchbox" data-options="prompt:'请输入户号',searcher:doSearch" style="width:10%">
-				请输入姓名：<input class="easyui-searchbox" data-options="prompt:'请输入姓名',searcher:doSearch" style="width:10%">
+			<div  class="easyui-panel" style="width:100%;height: 15%;padding:15px;border: none;">
+				请输入户号：<input name="res" class="easyui-searchbox" data-options="prompt:'请输入户号',searcher:doSearch" style="width:10%">
+				请输入姓名：<input name="pName" class="easyui-searchbox" data-options="prompt:'请输入姓名',searcher:doSearch" style="width:10%">
 			</div>
 			<div style="width: 100%;height: 75%;margin-top: 10px;border: solid 1px silver;">
 				
 			</div>
 			<div style="width: 100%;">
 				<input type="button" value="关闭" onclick="window.close();" style="float: right;" />
-				<input type="button" value="查询" style="float: right;" />
+				<input type="submit" onclick="resSelect();" value="查询" style="float: right;" />
 			</div>
 		</div>
-		<div title="按身份证查询" style="padding:10px">
-			<div class="easyui-panel" style="width:100%;height: 15%;padding:15px;border: none;">
-				请输入身份证：<input class="easyui-searchbox" data-options="prompt:'请输入身份证号',searcher:doSearch" style="width:10%">
-				请输入姓名：<input class="easyui-searchbox" data-options="prompt:'请输入姓名',searcher:doSearch" style="width:10%">
+		</form>
+		<form id="ff" method="post">
+		<div title="按身份证查询"  style="padding:10px">
+			<div  class="easyui-panel" style="width:100%;height: 15%;padding:15px;border: none;">
+				请输入身份证：<input name="pId" class="easyui-searchbox" data-options="prompt:'请输入身份证号',searcher:doSearch" style="width:10%">
 			</div>
 			<div style="width: 100%;height: 75%;margin-top: 10px;border: solid 1px silver;">
-				
+				<table>
+					<tr>
+						<td>身份证号</td>
+						<td>姓名</td>
+						<td>注册时间</td>
+						<td>本地地址</td>
+						<td>户籍类型</td>
+						<td>曾用名</td>
+						<td>身高</td>
+						<td>性别</td>
+						<td>血型</td>
+						<td>出生地址</td>
+						<td>民族</td>
+						<td>本地地址</td>
+						<td>出生日期</td>
+						<td>于户主关系</td>
+						<td>学历</td>
+						<td>是否结婚</td>
+						<td>是否服兵役</td>
+						<td>宗教信仰</td>
+						<td>工作</td>
+						<td>其它地址</td>
+						<td>户口号</td>
+					</tr>
+					<tr>
+					</tr>
+				</table>
 			</div>
 			<div style="width: 100%;">
 				<input type="button" value="关闭" onclick="window.close();" style="float: right;" />
-				<input type="button" value="查询" style="float: right;" />
+				<input type="submit" onclick="idSelect();" value="查询" style="float: right;" />
 			</div>
 		</div>
+	</from>	
 	</div>
+	
 </body>
 </html>

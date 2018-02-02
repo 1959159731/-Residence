@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class DBManger {
+public  class DBManger {
 	static {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
