@@ -1,0 +1,94 @@
+		/*链接已点击过时颜色*/
+		a:visited {
+		 color:#6B9CDE;
+		 text-decoration: none;
+		}
+		
+		/*鼠标放置链接时颜色*/
+		a:hover {
+		 text-decoration: none;
+		 color:#6666FF;
+		 
+		}
+		
+		/*链接点击当下的颜色*/
+		a:active {
+		 text-decoration: none;
+		 color: #6600CC;
+		}
+		
+		/*未点击时链接颜色*/
+		a:link {	
+			color: #666666;		
+			text-decoration: none;
+		}
+		
+		ul li{
+			list-style: none;
+			text-align: center;
+			} 
+			
+		z{
+			font-size: 19px;
+			font-family: "楷体";
+		 }
+		 
+		span z1{
+			font-size: 13px;
+			font-family: "微软雅黑";
+			}
+			
+		#str1{
+			display: none;
+		}
+		
+		img{
+			width: 1099px;
+			height: 480px;			
+		}
+		
+		.div-right{
+       float: right;
+       background-color: #95B8E7;
+       height:32px;
+       width:601px;
+       border: solid 0px;
+       margin-top:2px;
+       margin-right: 1px;
+            	
+    }
+    
+    .div-left{
+      background-color: #95B8E7;
+      height:32px;
+      width:155px;
+      border:#95B8E7;
+      margin-top:1px;            	 
+      font-family: "微软雅黑";            	 
+    }
+		
+		#left{
+			border-radius :15px;
+			width: 248px;
+			height: 480px;
+			border: solid 1px;
+			float: left;
+			border-color: #6B9CDE;
+		}
+		
+		#right{
+			border-radius :15px;
+			width: 1094px;
+			height:480px;
+			border:solid 1px;
+			margin-top:auto;
+			margin-left: 263px;
+			border-color: #6B9CDE;
+		}
+		
+		#top{
+			width: auto;
+			height: 25px;
+			border: solid 0px;
+			margin-top: 2px;
+		}

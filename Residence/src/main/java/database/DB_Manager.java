@@ -7,9 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public abstract class DB_Manager {
-	
-	private  ThreadLocal<Connection> threadlocal = new ThreadLocal<Connection>();
-	
+
 	static {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -17,7 +15,7 @@ public abstract class DB_Manager {
 			e.printStackTrace();
 		}	
 	}
-	
+	 
 	//创建连接
 	public Connection openConnection() throws SQLException {
 		String url="jdbc:mysql://localhost:3306/work?useSSL=true";
@@ -31,7 +29,7 @@ public abstract class DB_Manager {
 		}
 	}
 	
-	
+	//修改
 	public int update(Connection conn,String sql,Object...obs)throws SQLException {
 		int count=0;
 		if(conn!=null && !conn.isClosed()) {
@@ -46,6 +44,7 @@ public abstract class DB_Manager {
 		return count;
 	}
 
+	//查询
 	public ResultSet query(Connection conn,String sql,Object...obs)throws SQLException {
 		ResultSet rs=null;
 		if(conn!=null && !conn.isClosed()) {

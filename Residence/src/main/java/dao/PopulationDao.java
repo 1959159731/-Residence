@@ -23,8 +23,7 @@ import table.Population;
 		Object[] obs= {p.getpId(),p.getpName(),p.getpDate(),p.getpUsedName(),p.getpBirthday(),p.getpRelation(),p.getpMilitary(),p.getpReligions(),p.getpJob(),p.getpOtherAdd(),p.getrId()};
 		int count=this.update(conn, sql, obs);
 		this.closeConnection(conn);
-		return count;
-		
+		return count;		
 	}
 	
 	//É¾³ýÈË¿Ú

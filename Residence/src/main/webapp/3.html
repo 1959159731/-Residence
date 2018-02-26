@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/3.css"> 	
+	<style type="text/css">
+ 
+		* {
+          margin: 0px;
+          padding: 0px;
+        } 
+            
+        #nav {               
+           position: relative;
+           margin: 12px auto;
+           top: 0px; 				               
+		   float: left;
+		   margin-left: 10px;
+		   font-family: "微软雅黑";
+		   text-align: center;
+		   width: 230px;
+		   border: solid 0px;
+        } 
+              
+       .banner {
+           float: left;
+           text-align: center; 
+           line-height: 50px;
+           border: solid 0px;
+        }*/
+             
+         /*选中时候表头*/
+        .banner:hover {
+           height: 49px;
+           background-color:#AAC5E7;
+           cursor: pointer;
+           border: solid 0px;
+        } 
+        
+         /*窗体 */
+        div ul {
+            list-style: none;
+            background-color:#FAFAFA;
+            overflow: hidden;
+            /*模拟height:auto时候的情况*/                
+            max-height: 0px;
+            transition: max-height 0.3s;
+            /*多浏览器支持*/
+            -webkit-transition: height 1s;
+            -o-transition: height 0s;
+            color: #000000;
+  			border-color: #AAAAAA;
+  			border: solid 0px;
+  			width: 230px;
+  			margin-top: 0px; 				 
+        }
+           
+        /*展开 时外层div */
+        .banner:hover ul {
+            width:230px;
+            max-height: 460px;
+            border: solid 0px;                                            
+        }
+            
+        div ul li {
+            overflow: hidden;
+            width:230px; 
+            border: solid 0px;
+            height: 50px;                
+        }
+        
+        /*选中窗体时的颜色*/
+        div ul li:hover {
+            background-color:#EFEFEF;
+            width:240px;
+            border: solid 0px;
+        }
+	</style>		
+	<script type="text/javascript">
+	function Show(id){			
+			var str = document.getElementById("str"+id);
+ 			var menu = document.getElementById("menu"+id);
+ 						
+			if (str.style.display=="none") {
+				  document.getElementById("str"+id).style.display="block";
+				  menu.className = "st2";
+		 	}else {
+				  document.getElementById("str"+id).style.display="none";
+				  menu.className = "st3";
+			}					  
+	}	
+		
+ 	
+	var curIndex=0; 
+	var timeInterval=10000; 
+	var arr=new Array(); 
+	arr[0]="images/p1.jpg";  arr[1]="images/p3.jpg";  arr[2]="images/p5.jpg";  arr[3]="images/p6.jpg"; 
+	arr[4]="images/p8.jpg";  arr[5]="images/p9.jpg";    
+	setInterval(changeImg,timeInterval); 
+	function changeImg(){ 
+		var obj=document.getElementById("obj"); 
+		if (curIndex==arr.length-1) { 
+			curIndex=0; 
+			}else{ 
+			curIndex+=1; 
+			} 
+			obj.src=arr[curIndex]; 
+		}
+	
+	</script> 
+	</head>
+	<body >
+		<div style="width: auto;height: 100px;border: solid 0px;">
+			<img src="images/10.jpg" style="width: 100%;height: 100%;"/>
+			<span style="position: absolute; top: 30px; left: 210px;"><b><font size="6" face="楷体" color="white">西安市雁塔区公民身份户籍管理系统</font></b></span>
+			<span style="position: absolute; top: 19px; left: 70px;"><img src="images/h21.jpg" style="width: 68px;height:55px;"/></span>
+		</div>
+		<div id="top" >
+			<span style="position: absolute;left: 30px;"><z1>西安  多云  0° - -1°</z1></span>
+			<span style="position: absolute;right: 330px;"><z1>当前时间：2018年2月2日  10:24 星期五</z1></span>
+			<span style="position: absolute;right: 30px;"><z1>操作员：张燕 （系统管理员）</z1></span>
+		</div>
+		<div id="left" >
+			<div id="nav">
+                <div   class="banner">户籍管理
+                    <ul>
+                        <li><a href="">开户</a></li>
+                        <li><a href="">销户</a></li>
+                        <li><a href="">修改</a></li>
+                        <li><a href="">查询</a></li>
+                    </ul>
+                </div>
+                
+                <div   class="banner">人口管理
+                    <ul>
+                        <li><a href="">添加</a></li>
+                        <li><a href="">删除</a></li>
+                        <li><a href="">统计</a></li>
+                        <li><a href="">查询人口</a></li>
+                        <li><a href="">迁入，迁出</a></li>
+                    </ul>
+                </div>
+             
+                <div   class="banner">业务办理
+                    <ul>
+                        <li><a href="update.html">修改名字</a></li>
+                        <li><a href="">遗失，补办证件</a></li>
+                        <li><a href="stay.html">暂住证办理</a></li>
+                    </ul>
+                </div>
+             
+                <div  class="banner">窗口
+                    <ul>
+                        <li><a href="">1</a></li>
+                        <li><a href="">2</a></li>
+                    </ul>
+                </div>
+             
+                <div  class="banner">帮助
+                    <ul>
+                        <li><a href="">版本</a></li>
+                        <li><a href="">help</a></li>
+                    </ul>
+                </div>			
+			</div>			       
+		</div>
+		<div id="right">
+			<div style="width: 1090px;height: 480px;border: solid 0px; ">
+				<img id=obj src="images/p0.jpg"  border="0" style="border-radius :15px;"/>
+			</div>			
+		</div>
+
+	</body>
+</html>

@@ -4,7 +4,8 @@ import java.io.Serializable;
 
 //人口表
 public class Population implements Serializable{
-	 private  String  pId;    // 身份证
+  
+	private  String  pId;    // 身份证
 	 private  String  pName;  // 姓名
 	 private  String  pDate;  // 登记日期
 	 private  String  pAddress;  // 本地地址
