@@ -12,7 +12,7 @@ public class OperationService {
 	//可修改姓名，曾用名，本地地址
 	public boolean oUpdate(Population p) {
 		boolean bool = false;
-		 
+ 
 		try {
 			int cont = oDao.operationUpdate(p);
 			bool=cont>0?true:false;

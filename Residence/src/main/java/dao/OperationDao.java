@@ -19,7 +19,7 @@ public class OperationDao extends DB_Manager{
 		this.closeConnection(conn);
 		return cont;
 	}
-	
+	 
 	//补办户口本(查询户口本信息即可)
 	public Residence operationSelect(String num1) throws SQLException{
 		Residence r = null ;
@@ -57,7 +57,7 @@ public class OperationDao extends DB_Manager{
 	public int operationSave(Operation o) throws SQLException{
 		Connection conn = this.openConnection();
 		String sql="insert into operation values(default,?,?,?,?,?)";
-		Object[] obj= {o.getoId(), o.getoGoDate(), o.getoToDate(), o.getoNnuboer(), o.getoAddress()};
+		Object[] obj= {o.getoGoDate(), o.getoNnuboer(), o.getpId(), o.getoToDate(), o.getoAddress()};
 		int cont = this.update(conn, sql, obj);
 		this.closeConnection(conn);
 		return cont;

@@ -2,60 +2,62 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>添加或迁入人口验证</title>
+<title>修改姓名</title>
 	<link rel="stylesheet" type="text/css" href="css/update.css">
 </head>
 <body>
 	<div class="center">
 		<div align="center" >
 			<br />
-			<font size="6" face="楷体" color="#8E8E8E"><b>添加或迁入人口验证</b></font> 
+			<font size="6" face="楷体" color="#8E8E8E"><b>修改姓名</b></font> 
 		</div>
 		<br />
+		<form action="PUpdateServlet" method="post" >
 		<div class="div1">
-			<span class="title">基本信息</span>
-		<form action="post" >			
-			<table border="0" cellspacing="0" cellpadding="0">
+			<span class="title">基本信息</span>			
+			<table border="0" cellspacing="0" cellpadding="0">			 
 				<tr>				 
-					<td >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<z>姓名：</z><input type="text" style="width: 150px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<z>登记日期：</z><input type="text"></td>
+					<td >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<z>姓名：</z><input name="pName" value="${}" type="text" style="width: 150px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<z>登记日期：</z><input name="pDate" type="text" >
+					</td>
 				</tr>
 				<tr>
-					<td >&nbsp;<z>身份证号码：</z><input type="text" style="width: 660px;height: 25px;"></td>
+					<td >&nbsp;<z>身份证号码：</z><input name="pId" type="text" style="width: 660px;height: 25px;"></td>
 				</tr>
 				<tr>
 					<td>
 						<label>&nbsp;&nbsp;<z>本地地址：</z></label>
-						<textarea id="textarea" rows="3" cols="100"style="vertical-align: top;"></textarea>
+						<textarea name="pAddress" rows="3" cols="100"style="vertical-align: top;"></textarea>
 					</td>
 				</tr>
 				<tr>
 					<td>&nbsp;&nbsp;<z>户籍类型：</z>
-						<select>
+						<select name="pHRType">
 							<option >城镇</option>
 							<option >农村</option>
 						</select>
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<z>曾用名：</z><input type="text" style="width: 120px;">
+					<z>曾用名：</z><input name="pUsedName" type="text" style="width: 120px;">
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<z>身高：   </z><input type="text" style="width: 125px;">
+					<z>身高：   </z><input name="pHeight" type="text" style="width: 125px;">
 					</td>
 				</tr>
 				<tr>
 					<td><z>与户主关系：</z>
-						<select>
+						<select name="pRelation">
 							<option >父子</option>
 							<option >父女</option>
 							<option >夫妻</option>
 						</select>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					 <z>性别：&nbsp;</z>
-						<select >
+						<select name="pSex">
 							<option >男</option>
 							<option >女</option>
 						</select>
 					    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					 <z>血型：</z>
-						<select >
+						<select name="pBType">
 							<option >A型</option>
 							<option >B型</option>
 							<option >AB型</option>
@@ -65,11 +67,11 @@
 					</td>
 				</tr>
 				<tr>
-					<td >&nbsp;&nbsp;<z>出生地址：</z>&nbsp;<textarea id="textarea" rows="4" cols="28"style="vertical-align: top;"></textarea></td>
+					<td >&nbsp;&nbsp;<z>出生地址：</z>&nbsp;<textarea name="pBornPlace" rows="4" cols="28"style="vertical-align: top;"></textarea></td>
 				</tr>
 				<tr>
 					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<z>民族：</z>
-						<select >
+						<select name="pNation">
 							<option >汉族</option>
 							<option >壮族</option>
 							<option >满族</option>
@@ -82,13 +84,13 @@
 							<option >苗族</option>
 						</select>
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<z>籍贯：</z>&nbsp;<input type="text" style="width: 127px;">
+					<z>籍贯：</z>&nbsp;<input name="pNativePlace" type="text" style="width: 127px;">
 					</td>
 				</tr>
 				<tr>
-					<td>&nbsp;&nbsp;&nbsp;<z>出生日期：</z><input type="text" style="width: 130px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<td>&nbsp;&nbsp;&nbsp;<z>出生日期：</z><input name="pBirthday" type="text" style="width: 130px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<z>文化程度：</z>
-						<select >
+						<select name="pDegree">
 							<option ><z>小学</z></option>
 							<option ><z>初中</z></option>
 							<option ><z>高中</z></option>
@@ -102,27 +104,28 @@
 				</tr>
 				<tr>
 					<td>&nbsp;&nbsp;&nbsp;<z>婚姻状况：</z>
-						<input type="radio" name="userName" style="color:#555555;"><z>未婚</z>&nbsp;
-						<input type="radio" name="userName" style="color:#555555;"><z>已婚</z>
+						<input type="radio" name="pMarry" style="color:#555555;"><z>未婚</z>&nbsp;
+						<input type="radio" name="pMarry" style="color:#555555;"><z>已婚</z>
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<z>兵役情况：</z>&nbsp;<input type="text" style="width: 127px;"> <z>（非必填项）</z>
+					<z>兵役情况：</z>&nbsp;<input name="pMilitary" type="text" style="width: 127px;"> <z>（非必填项）</z>
 					</td>
 				</tr>
 				<tr>
 					<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<z>职业：</z>
-						<input type="text" name="userName" style="width: 130px;">
+						<input type="text" name="pJob" style="width: 130px;">
 					&nbsp;&nbsp;&nbsp;&nbsp;
-					<z>宗教信仰：</z>&nbsp;<input type="text" style="width: 127px;">  <z>（非必填项）</z>
+					<z>宗教信仰：</z>&nbsp;<input name="pReligions" type="text" style="width: 127px;">  <z>（非必填项）</z>
 					</td>
 				</tr>
 				<tr>
 					<td >&nbsp;
-						<z>其他地址：</z>&nbsp;<textarea id="textarea" rows="4" cols="31"style="vertical-align: top;"></textarea>
+						<z>其他地址：</z>&nbsp;<textarea name="pOtherAdd" rows="4" cols="31"style="vertical-align: top;"></textarea>
 						
 					</td>
 				</tr>
-				
+			</c:forEach>	
 			</table>
+			
 			<br />
 			</div>
 			<div style="height: 15%;margin-right: 21px;"align="right">

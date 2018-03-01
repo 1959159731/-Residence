@@ -49,14 +49,18 @@ public class PopulationService {
 	
 	
 	//查询单个人员
-		public List<Population> pSelect(int mun) {
-			List<Population> pList=null;
+		public boolean pSelect(String mun) {
+			Population p=null;
+			boolean bool = false;
 			try {
-				pList=pDao.populationSelect(mun);
+				p=pDao.populationSelect(mun);
+				if(p!=null) {
+					bool = true;
+				}
 			}catch(SQLException e) {
 				e.printStackTrace();
 			}
-			return pList;
+			return bool;
 		}
 		
 		

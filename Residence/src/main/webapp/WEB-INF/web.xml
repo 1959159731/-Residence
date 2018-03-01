@@ -4,4 +4,45 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>PUpdateServlet</servlet-name>
+  	<display-name>PUpdateServlet</display-name>
+  	<description></description>
+  	<servlet-class>servlet.PUpdateServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>selectServlet</servlet-name>
+  	<servlet-class>servlet.SelectServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>saveServlet</servlet-name>
+  	<display-name>saveServlet</display-name>
+  	<description></description>
+  	<servlet-class>servlet.saveServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>operationServlet</servlet-name>
+  	<display-name>operationServlet</display-name>
+  	<description></description>
+  	<servlet-class>servlet.operationServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>PUpdateServlet</servlet-name>
+  	<url-pattern>/PUpdateServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>selectServlet</servlet-name>
+  	<url-pattern>/selectServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>saveServlet</servlet-name>
+  	<url-pattern>/saveServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>operationServlet</servlet-name>
+  	<url-pattern>/operationServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

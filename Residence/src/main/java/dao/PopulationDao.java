@@ -48,15 +48,14 @@ import table.Population;
 	}
  
 	//查询单个人员
-	public List<Population> populationSelect(int mun)throws SQLException{
-		Population p=null;
-		List<Population> pList=new ArrayList<Population>();		
+	public Population populationSelect(String mun)throws SQLException{
+		Population p=null;	
 		Connection conn=this.openConnection();
 		String sql="select * from Population where pId=?";
 		Object[] obs= {mun};
 		ResultSet rs=this.query(conn, sql, obs);
 		if(rs.next()) {
-			p=new Population();
+			p = new Population();
 			p.setpId(rs.getString("pId"));
 			p.setpName(rs.getString("pName"));
 			p.setpDate(rs.getString("pDate"));
@@ -78,10 +77,10 @@ import table.Population;
 			p.setpJob(rs.getString("pJob"));
 			p.setpOtherAdd(rs.getString("pOtherAdd"));
 			p.setrId(rs.getInt("rId"));	
-			pList.add(p);
+			
 		}
 		this.closeConnection(conn);
-		return pList;
+		return p;
 	}
 	
 	
